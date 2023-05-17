@@ -1,16 +1,16 @@
 <?php
-    include __DIR__. '/Category.php';
+    include __DIR__. '/Type.php';
 
-    class Product extends Category{
+    class Product extends Type{
         protected 
         $product_id, $product_name, $price, $img;
 
-        public function __construct(int $product_id, string $product_name, int $price, string $img, $category_id, $category_name ){
+        public function __construct(int $product_id, string $product_name, int $price, string $img, $type_id, $type_name, $category_id, $category_name){
             $this ->product_id = $product_id;
             $this ->product_name = $product_name;
             $this ->price = $price;
             $this ->img = $img;
-            parent::__construct($category_id, $category_name);
+            parent::__construct($type_id, $type_name, $category_id, $category_name );
         }
 
 
@@ -46,3 +46,6 @@
             return $this->img;
         }
     }
+
+    $prod1 = new Product(1, 'cior', 26, 'hslwdjl', 2 ,'cibo', '1', 'cane');
+    var_dump($prod1);
