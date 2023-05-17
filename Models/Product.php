@@ -47,5 +47,4 @@
         }
     }
 
-    $prod1 = new Product(1, 'cior', 26, 'hslwdjl', 2 ,'cibo', '1', 'cane');
-    var_dump($prod1);
+    

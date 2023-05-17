@@ -1,3 +1,5 @@
+<?php include __DIR__.'/db/db.php'?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +9,15 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <?php foreach($products as $product){ ?>
+        <div class="card">
+            <h3><?php echo $product->getproduct_name()?></h3>
+            <ul>
+                <li><?php echo $product->getprice()?></li>
+                <li><?php echo $product->gettype_name()?></li>
+                <li><?php echo $product->getcategory_name()?></li>
+            </ul>
+        </div>
+    <?php } ?>
 </body>
 </html>
