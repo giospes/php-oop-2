@@ -16,6 +16,7 @@
                 <li><?php echo $product->getprice()?></li>
                 <li><?php echo $product->gettype_name()?></li>
                 <li><?php echo $product->getcategory_name()?></li>
+                <li><?php echo $product->getWeight()?></li>
             </ul>
         </div>
     <?php } ?>

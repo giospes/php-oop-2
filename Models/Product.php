@@ -1,7 +1,8 @@
 <?php
     include __DIR__. '/Type.php';
-
+    include __DIR__.'/Weight.php';
     class Product extends Type{
+        use Weight;
         protected 
         $product_id, $product_name, $price, $img;
 
